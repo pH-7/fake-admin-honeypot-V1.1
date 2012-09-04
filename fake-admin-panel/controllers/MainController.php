@@ -1,9 +1,25 @@
 <?php
-namespace PH7;
-class MainController extends Controller {
+/**
+ * @title Main Controller
+ *
+ * Reproduces a false administration interface identical to the real interface.
+ *
+ * @author         Pierre-Henry Soria <ph7software@gmail.com>
+ * @copyright      (c) 2012, Pierre-Henry Soria. All Rights Reserved.
+ * @license        GNU General Public License; See PH7.LICENSE.txt and PH7.COPYRIGHT.txt in the root directory.
+ * @package        PH7 / App / Module / Fake Admin Panel / Controller
+ * @version        1.1.0
+ */
 
-    public function login() {
-        $this->view->page_title = t('Sign in for Admin Panel');
+namespace PH7;
+
+class MainController extends Controller
+{
+
+    public function login()
+    {
+        $this->view->header = '<meta name="robots" content="noindex" />';
+        $this->view->page_title = t('Sign in to Admin Panel');
         $this->view->page_h1 = t('Sign in');
         $this->output();
     }
