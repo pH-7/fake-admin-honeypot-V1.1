@@ -38,7 +38,7 @@ class LoginForm
         }
 
         $oForm->addElement(new \PFBC\Element\Button(t('Login'),'submit', array('icon'=>'key')));
-        $oForm->addElement(new \PFBC\Element\HTMLExternal('<script src="'.PH7_URL_STATIC.PH7_JS.'validate.js"></script>'));
+        $oForm->addElement(new \PFBC\Element\HTMLExternal('<script src="' . PH7_URL_STATIC . PH7_JS . 'validate.js"></script>'));
         $oForm->render();
     }
 
