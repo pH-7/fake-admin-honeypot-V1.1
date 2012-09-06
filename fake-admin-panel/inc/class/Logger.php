@@ -80,10 +80,8 @@ class Logger extends Core
      */
     protected function writeFile()
     {
-        $sFileName = $this->_fIp . '.log';
-        $sPath = $this->registry->path_module_inc . static::FILE_ATTACK . $sFileName;
-        $iFlag = (is_file($sPath)) ? FILE_APPEND : 0;
-        file_put_contents($sPath, $this->_sContents, $iFlag);
+        $sFullPath = $this->registry->path_module_inc . static::FILE_ATTACK . $this->_fIp . '.log';
+        file_put_contents($sFullPath, $this->_sContents, FILE_APPEND);
     }
 
     /**
@@ -92,14 +90,11 @@ class Logger extends Core
      * @access protected
      * @return void
      */
-     protected function blockIp()
-     {
-        $sContent = $this->_fIp . "\n";
-        $sPathFile = PH7_PATH_APP_CONFIG . Ban::DIR . Ban::IP_FILE;
-
-        $iFlag = (is_file($sPathFile)) ? FILE_APPEND : 0;
-        file_put_contents($sPathFile, $sContent, $iFlag);
-     }
+    protected function blockIp()
+    {
+        $sFullPath = PH7_PATH_APP_CONFIG . Ban::DIR . Ban::IP_FILE;
+        file_put_contents($sFullPath, $this->_fIp . "\n", FILE_APPEND);
+    }
 
     /**
      * Sends a email to admin.
