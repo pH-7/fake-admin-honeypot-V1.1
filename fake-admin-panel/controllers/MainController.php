@@ -6,7 +6,7 @@
  *
  * @author         Pierre-Henry Soria <ph7software@gmail.com>
  * @copyright      (c) 2012, Pierre-Henry Soria. All Rights Reserved.
- * @license        GNU General Public License; See PH7.LICENSE.txt and PH7.COPYRIGHT.txt in the root directory.
+ * @license        GNU General Public License.
  * @package        PH7 / App / Module / Fake Admin Panel / Controller
  * @version        1.1.0
  */
