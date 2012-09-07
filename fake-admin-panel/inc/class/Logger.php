@@ -27,9 +27,9 @@ class Logger extends Core
      * IP address.
      *
      * @access private
-     * @var float $_fIp
+     * @var string $_sIp
      */
-    private $_fIp;
+    private $_sIp;
     /**
      * The informations contents.
      *
@@ -51,12 +51,12 @@ class Logger extends Core
         $sAgent = (null !== ($mAgent = $this->browser->getUserAgent() )) ? $mAgent : 'NO USER AGENT';
         $sQuery = (null !== ($mQuery = (new Http)->getQueryString() )) ? $mQuery : 'NO QUERY STRING';
 
-        $this->_fIp = Ip::get();
+        $this->_sIp = Ip::get();
         extract($aData);
 
         $this->_sContents =
         t('Date: %0%', $this->dateTime->get()->dateTime()) . "\n" .
-        t('IP: %0%', $this->_fIp) . "\n" .
+        t('IP: %0%', $this->_sIp) . "\n" .
         t('QUERY: %0%', $sQuery) . "\n" .
         t('Agent: %0%', $sAgent) . "\n" .
         t('Referer: %0%', $sReferer) . "\n" .
@@ -80,7 +80,7 @@ class Logger extends Core
      */
     protected function writeFile()
     {
-        $sFullPath = $this->registry->path_module_inc . static::FILE_ATTACK . $this->_fIp . '.log';
+        $sFullPath = $this->registry->path_module_inc . static::FILE_ATTACK . $this->_sIp . '.log';
         file_put_contents($sFullPath, $this->_sContents, FILE_APPEND);
     }
 
@@ -93,7 +93,7 @@ class Logger extends Core
     protected function blockIp()
     {
         $sFullPath = PH7_PATH_APP_CONFIG . Ban::DIR . Ban::IP_FILE;
-        file_put_contents($sFullPath, $this->_fIp . "\n", FILE_APPEND);
+        file_put_contents($sFullPath, $this->_sIp . "\n", FILE_APPEND);
     }
 
     /**
