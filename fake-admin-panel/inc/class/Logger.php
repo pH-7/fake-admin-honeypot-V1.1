@@ -56,8 +56,10 @@ class Logger extends Core
      */
     public function init(array $aData)
     {
+        // Add form data in the variable.
         $this->_aData = $aData;
 
+        // Creates the log message and adds it to the list of logs.
         $this->setLogMsg()->writeFile();
 
         if ($this->config->values['module.setting']['report_email.enable'])
@@ -94,7 +96,7 @@ class Logger extends Core
     }
 
     /**
-     * Writes a log file with the hacher informations.
+     * Write a log file with the hacher informations.
      *
      * @access protected
      * @return object this
@@ -122,7 +124,7 @@ class Logger extends Core
     }
 
     /**
-     * Sends a email to admin.
+     * Send an email to admin.
      *
      * @access protected
      * @return object this
