@@ -18,10 +18,19 @@ PH7\Framework\Mail\Mail;
 
 class Logger extends Core
 {
+
     /**
      * Folder of the informations logs files.
      */
     const FILE_ATTACK = '_attackers/';
+
+    /**
+     * Data contents.
+     *
+     * @access private
+     * @var $_aData
+     */
+     private $_aData;
 
     /**
      * IP address.
@@ -47,22 +56,9 @@ class Logger extends Core
      */
     public function init(array $aData)
     {
-        $sReferer = (null !== ($mReferer = $this->browser->getHttpReferer() )) ? $mReferer : 'NO HTTP REFERER';
-        $sAgent = (null !== ($mAgent = $this->browser->getUserAgent() )) ? $mAgent : 'NO USER AGENT';
-        $sQuery = (null !== ($mQuery = (new Http)->getQueryString() )) ? $mQuery : 'NO QUERY STRING';
+        $this->_aData = $aData;
 
-        $this->_sIp = Ip::get();
-        extract($aData);
-
-        $this->_sContents =
-        t('Date: %0%', $this->dateTime->get()->dateTime()) . "\n" .
-        t('IP: %0%', $this->_sIp) . "\n" .
-        t('QUERY: %0%', $sQuery) . "\n" .
-        t('Agent: %0%', $sAgent) . "\n" .
-        t('Referer: %0%', $sReferer) . "\n" .
-        t('LOGIN - Email: %0% - Username: %1% - Password: %2%', $mail, $username, $password) . "\n\n\n";
-
-        $this->writeFile();
+        $this->setLogMsg()->writeFile();
 
         if ($this->config->values['module.setting']['report_email.enable'])
             $this->sendMessage();
@@ -73,34 +69,63 @@ class Logger extends Core
     }
 
     /**
+     * Build the log message.
+     *
+     * @access protected
+     * @return object this
+     */
+     protected function setLogMsg()
+     {
+        $sReferer = (null !== ($mReferer = $this->browser->getHttpReferer() )) ? $mReferer : 'NO HTTP REFERER';
+        $sAgent = (null !== ($mAgent = $this->browser->getUserAgent() )) ? $mAgent : 'NO USER AGENT';
+        $sQuery = (null !== ($mQuery = (new Http)->getQueryString() )) ? $mQuery : 'NO QUERY STRING';
+
+        $this->_sIp = Ip::get();
+
+        $this->_sContents =
+        t('Date: %0%', $this->dateTime->get()->dateTime()) . "\n" .
+        t('IP: %0%', $this->_sIp) . "\n" .
+        t('QUERY: %0%', $sQuery) . "\n" .
+        t('Agent: %0%', $sAgent) . "\n" .
+        t('Referer: %0%', $sReferer) . "\n" .
+        t('LOGIN - Email: %0% - Username: %1% - Password: %2%', $this->_aData['mail'], $this->_aData['username'], $this->_aData['password']) . "\n\n\n";
+
+        return $this;
+    }
+
+    /**
      * Writes a log file with the hacher informations.
      *
      * @access protected
-     * @return void
+     * @return object this
      */
     protected function writeFile()
     {
         $sFullPath = $this->registry->path_module_inc . static::FILE_ATTACK . $this->_sIp . '.log';
         file_put_contents($sFullPath, $this->_sContents, FILE_APPEND);
+
+        return $this;
     }
 
     /**
      * Blocking IP address.
      *
      * @access protected
-     * @return void
+     * @return object this
      */
     protected function blockIp()
     {
         $sFullPath = PH7_PATH_APP_CONFIG . Ban::DIR . Ban::IP_FILE;
         file_put_contents($sFullPath, $this->_sIp . "\n", FILE_APPEND);
+
+        return $this;
     }
 
     /**
      * Sends a email to admin.
      *
      * @access protected
-     * @return void
+     * @return object this
      */
     protected function sendMessage()
     {
@@ -110,6 +135,8 @@ class Logger extends Core
         ];
 
         (new Mail)->send($aInfo, $this->_sContents, false);
+
+        return $this;
     }
 
 }
