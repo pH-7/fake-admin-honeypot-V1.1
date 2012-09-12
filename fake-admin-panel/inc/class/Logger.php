@@ -127,7 +127,7 @@ class Logger extends Core
      * Send an email to admin.
      *
      * @access protected
-     * @return object this
+     * @return integer
      */
     protected function sendMessage()
     {
@@ -136,9 +136,7 @@ class Logger extends Core
           'subject' => t('Reporting of the Fake Admin Honeypot')
         ];
 
-        (new Mail)->send($aInfo, $this->_sContents, false);
-
-        return $this;
+        return (new Mail)->send($aInfo, $this->_sContents, false);
     }
 
 }
