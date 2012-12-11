@@ -1,6 +1,6 @@
 <?php
 /**
- * @title Login Form Processing
+ * @title          Login Form Processing
  *
  * @author         Pierre-Henry Soria <ph7software@gmail.com>
  * @copyright      (c) 2012, Pierre-Henry Soria. All Rights Reserved.

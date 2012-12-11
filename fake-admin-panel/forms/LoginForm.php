@@ -1,6 +1,6 @@
 <?php
 /**
- * @title Login Form
+ * @title          Login Form
  *
  * @author         Pierre-Henry Soria <ph7software@gmail.com>
  * @copyright      (c) 2012, Pierre-Henry Soria. All Rights Reserved.

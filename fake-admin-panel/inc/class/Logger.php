@@ -1,6 +1,6 @@
 <?php
 /**
- * @title Logger Class
+ * @title          Logger Class
  *
  * @author         Pierre-Henry Soria <ph7software@gmail.com>
  * @copyright      (c) 2012, Pierre-Henry Soria. All Rights Reserved.
@@ -22,7 +22,7 @@ class Logger extends Core
     /**
      * Folder of the informations logs files.
      */
-    const FILE_ATTACK = '_attackers/';
+    const ATTACK_DIR = '_attackers/';
 
     /**
      * Data contents.
@@ -103,7 +103,7 @@ class Logger extends Core
      */
     protected function writeFile()
     {
-        $sFullPath = $this->registry->path_module_inc . static::FILE_ATTACK . $this->_sIp . '.log';
+        $sFullPath = $this->registry->path_module_inc . static::ATTACK_DIR . $this->_sIp . '.log';
         file_put_contents($sFullPath, $this->_sContents, FILE_APPEND);
 
         return $this;

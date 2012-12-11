@@ -21,7 +21,7 @@ class AdminController extends MainController
         $this->sTitle = t('Logs | Administration of Fake Admin');
         $this->view->page_title = $this->sTitle;
         $this->view->h2_title = $this->sTitle;
-        $this->view->path_log =  '?dir=' . PH7_MOD . $this->registry->module . PH7_DS . PH7_INC . Logger::FILE_ATTACK;
+        $this->view->path_log =  '?dir=' . PH7_MOD . $this->registry->module . PH7_DS . PH7_INC . Logger::ATTACK_DIR;
         $this->output();
     }
 
