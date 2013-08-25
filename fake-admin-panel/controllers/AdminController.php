@@ -1,11 +1,10 @@
 <?php
 /**
- * @title Admin Controller
- *
- * Config Module.
+ * @title          Admin Controller
+ * @desc           Configuring the honeypot and viewing log.
  *
  * @author         Pierre-Henry Soria <ph7software@gmail.com>
- * @copyright      (c) 2012, Pierre-Henry Soria. All Rights Reserved.
+ * @copyright      (c) 2012-2013, Pierre-Henry Soria. All Rights Reserved.
  * @license        GNU General Public License.
  * @package        PH7 / App / Module / Fake Admin Panel / Controller
  * @version        1.1.0
