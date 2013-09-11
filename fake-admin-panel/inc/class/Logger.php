@@ -10,6 +10,7 @@
  */
 
 namespace PH7;
+
 use
 PH7\Framework\Security\Ban\Ban,
 PH7\Framework\Http\Http,
