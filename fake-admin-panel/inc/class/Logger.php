@@ -3,7 +3,7 @@
  * @title          Logger Class
  *
  * @author         Pierre-Henry Soria <ph7software@gmail.com>
- * @copyright      (c) 2012-2013, Pierre-Henry Soria. All Rights Reserved.
+ * @copyright      (c) 2012-2015, Pierre-Henry Soria. All Rights Reserved.
  * @license        GNU General Public License <http://www.gnu.org/licenses/gpl.html>
  * @package        PH7 / App / Module / Fake Admin Panel / Inc / Class
  * @version        1.1.8
@@ -21,7 +21,7 @@ class Logger extends Core
 {
 
     /**
-     * Folder of the informations logs files.
+     * Folder of the information logs files.
      */
     const ATTACK_DIR = '_attackers/';
 
@@ -41,7 +41,7 @@ class Logger extends Core
      */
     private $_sIp;
     /**
-     * The informations contents.
+     * The information contents.
      *
      * @access private
      * @var string $_sContents
@@ -97,7 +97,7 @@ class Logger extends Core
     }
 
     /**
-     * Write a log file with the hacher informations.
+     * Write a log file with the hacher information.
      *
      * @access protected
      * @return object this

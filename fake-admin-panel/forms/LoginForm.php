@@ -3,7 +3,7 @@
  * @title          Login Form
  *
  * @author         Pierre-Henry Soria <ph7software@gmail.com>
- * @copyright      (c) 2012-2013, Pierre-Henry Soria. All Rights Reserved.
+ * @copyright      (c) 2012-2015, Pierre-Henry Soria. All Rights Reserved.
  * @license        GNU General Public License <http://www.gnu.org/licenses/gpl.html>
  * @package        PH7 / App / Module / Fake Admin Panel / Form
  * @version        1.1.1
@@ -23,7 +23,7 @@ class LoginForm
             if (\PFBC\Form::isValid($_POST['submit_login']))
                 new LoginFormProcess;
 
-            Framework\Url\HeaderUrl::redirect();
+            Framework\Url\Header::redirect();
         }
 
         $oForm = new \PFBC\Form('form_login', 500);
