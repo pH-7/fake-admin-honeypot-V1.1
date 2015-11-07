@@ -1,27 +1,35 @@
 # Honeypot Fake Admin Panel
 
-_This is the new version (1.1.8) of Admin Honeypot_
+_This is the latest version (1.1.8) of the Admin Honeypot Module_
 
 This is an effective and powerful honeypot fake admin CP for the security site. Honeypot for the attackers! 
-It is compatible only with the pH7CMS (my CMS). 
-For the __Standalone version__ or __Joomla version__, please go [here](http://github.com/pH-7/Honeypots).
 
-More information [here](http://en.wikipedia.org/wiki/Honeypot_(computing)).
+This module is only compatible with [pH7CMS](http://ph7cms.com) (my [Open Source Social CMS](http://github.com/pH7Software/pH7-Social-Dating-CMS) :smiley:). 
 
-P.S. The CMS includes already tracking analytics to have a trace of the attacker on your site.
+If you prefer, I released a __Standalone version__ or __Joomla version__ as well and available [here](http://github.com/pH-7/Honeypots).
 
-## Server Requirements
 
-PHP 5.4.0 or newer.
+If you wish, you can get more information concerning Honeypots techniques [here](http://en.wikipedia.org/wiki/Honeypot_(computing)).
+
+
+P.S. pH7CMS already includes tracking analytics to have a trace of the attacker on your site.
+
+
+## Requirements
+
+PHP 5.4.0 or newer + [pH7CMS](http://ph7cms.com/order/) + [pH7CMS's requirements](http://ph7cms.com/doc/en/requirements).
+
 
 ## Author
 
 Pierre-Henry Soria
 
+
 ## Contact
 
-Contact me at ph7software@gmail.com
+Contact me at *ph7software [[AT]] gmail [[D0T]] com* or at *hello [[AT]] ph7cms [[D0T]] com*
+
 
 ## License
 
-[General Public License 3](http://www.gnu.org/licenses/gpl.html) or later; See the LICENSE.txt file.
+[General Public License 3](http://www.gnu.org/licenses/gpl.html) or later; Check LICENSE.txt file for more details.
