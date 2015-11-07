@@ -27,7 +27,7 @@ Pierre-Henry Soria
 
 ## Contact
 
-Contact me at *ph7software [[AT]] gmail [[D0T]] com* or at *hello [[AT]] ph7cms [[D0T]] com*
+Contact me at: *ph7software [[AT]] gmail [[D0T]] com* or at: *hello [[AT]] ph7cms [[D0T]] com*
 
 
 ## License
