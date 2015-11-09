@@ -9,7 +9,7 @@ This module is only compatible with [pH7CMS](http://ph7cms.com) (my [Open Source
 If you prefer, I released a __Standalone version__ or __Joomla version__ as well and available [here](http://github.com/pH-7/Honeypots).
 
 
-If you wish, you can get more information concerning Honeypots techniques [here](http://en.wikipedia.org/wiki/Honeypot_(computing)).
+Finally, if you wish, you can get more information concerning Honeypots techniques [here](http://en.wikipedia.org/wiki/Honeypot_(computing)), or on my French ebook available [here](http://01script.com/static/gifts/books/Guide-Pots-de-Miel-informatique.pdf).
 
 
 P.S. pH7CMS already includes tracking analytics to have a trace of the attacker on your site.
