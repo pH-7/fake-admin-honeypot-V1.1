@@ -3,7 +3,7 @@
  * @title          Logger Class
  *
  * @author         Pierre-Henry Soria <ph7software@gmail.com>
- * @copyright      (c) 2012-2015, Pierre-Henry Soria. All Rights Reserved.
+ * @copyright      (c) 2012-2016, Pierre-Henry Soria. All Rights Reserved.
  * @license        GNU General Public License <http://www.gnu.org/licenses/gpl.html>
  * @package        PH7 / App / Module / Fake Admin Panel / Inc / Class
  * @version        1.1.8
@@ -63,10 +63,10 @@ class Logger extends Core
         // Creates the log message and adds it to the list of logs.
         $this->setLogMsg()->writeFile();
 
-        if ($this->config->values['module.setting']['report_email.enable'])
+        if ($this->config->values['module.setting']['report_email.enabled'])
             $this->sendMessage();
 
-        if ($this->config->values['module.setting']['auto_banned_ip.enable'])
+        if ($this->config->values['module.setting']['auto_banned_ip.enabled'])
             $this->blockIp();
 
     }
