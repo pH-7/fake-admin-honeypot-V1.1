@@ -2,9 +2,9 @@
 
 _This is the latest version (1.1.8) of the Admin Honeypot Module_
 
-This is an effective and powerful honeypot fake admin CP for the security site. Honeypot for the attackers! 
+This is an effective and powerful honeypot fake admin CP for the security site. Honeypot for the attackers!
 
-This module is only compatible with [pH7CMS](http://ph7cms.com) (my [Open Source Social CMS](http://github.com/pH7Software/pH7-Social-Dating-CMS) :smiley:). 
+This module is only compatible with [pH7CMS](http://ph7cms.com) (my [Open Source Social CMS](http://github.com/pH7Software/pH7-Social-Dating-CMS) :smiley:).
 
 If you prefer, I released a __Standalone version__ or __Joomla version__ as well and available [here](http://github.com/pH-7/Honeypots).
 
@@ -22,7 +22,7 @@ PHP 5.4.0 or newer + [pH7CMS](http://ph7cms.com/order/) + [pH7CMS's requirements
 
 ## Author
 
-Pierre-Henry Soria
+Made with ♥ and care by [Pierre-Henry Soria](http://ph7.me)
 
 
 ## Contact
