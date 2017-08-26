@@ -13,7 +13,6 @@ namespace PH7;
 
 class LoginFormProcess extends Form
 {
-
     public function __construct()
     {
         parent::__construct();
