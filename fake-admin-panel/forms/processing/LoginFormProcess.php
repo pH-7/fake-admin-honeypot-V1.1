@@ -23,5 +23,4 @@ class LoginFormProcess extends Form
         $this->session->set('captcha_admin_enabled', 1); // Enable Captcha
         \PFBC\Form::setError('form_login', t('"Email", "Username" or "Password" is Incorrect'));
     }
-
 }
