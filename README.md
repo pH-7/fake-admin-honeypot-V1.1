@@ -27,7 +27,7 @@ Made with ♥ and care by [Pierre-Henry Soria](http://ph7.me)
 
 ## Contact
 
-Contact me at: *ph7software [[AT]] gmail [[D0T]] com* or at: *hello [[AT]] ph7cms [[D0T]] com*
+Contact me at: *hi [[AT]] ph7 [[D0T]] me* or at: *hello [[AT]] ph7cms [[D0T]] com*
 
 
 ## License
