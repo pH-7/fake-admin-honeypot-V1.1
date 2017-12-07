@@ -19,6 +19,7 @@ class AdminController extends MainController
         $this->view->page_title = $this->sTitle;
         $this->view->h2_title = $this->sTitle;
         $this->view->path_log = '?dir=' . PH7_MOD . $this->registry->module . PH7_DS . PH7_INC . Logger::ATTACK_DIR;
+
         $this->output();
     }
 
@@ -27,6 +28,7 @@ class AdminController extends MainController
         $this->sTitle = t('Config | Fake Admin Honeypot');
         $this->view->page_title = $this->sTitle;
         $this->view->h2_title = $this->sTitle;
+
         $this->output();
     }
 }
