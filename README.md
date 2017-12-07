@@ -1,6 +1,6 @@
 # Honeypot Fake Admin Panel
 
-_This is the latest version (1.1.8) of the Admin Honeypot Module_
+_This is the latest version (1.2) of the pH7CMS, Admin Honeypot Module_
 
 This is an effective and powerful honeypot fake admin CP for the security site. Honeypot for the attackers!
 
