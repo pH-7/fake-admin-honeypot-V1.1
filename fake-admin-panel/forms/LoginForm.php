@@ -15,8 +15,6 @@ use PH7\Framework\Url\Header;
 
 class LoginForm
 {
-    const FORM_WIDTH = 500;
-
     public static function display()
     {
         if (isset($_POST['submit_login'])) {
