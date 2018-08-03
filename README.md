@@ -2,6 +2,9 @@
 
 _This is the latest version (1.2) of the pH7CMS, Admin Honeypot Module_
 
+![Fake Admin Panel. Honeypot. Bee](honeypot-security-bee.svg)
+
+
 This is an effective and powerful honeypot fake admin CP for the security site. Honeypot for the attackers!
 
 This module is only compatible with [pH7CMS](http://ph7cms.com) (my [Open Source Social CMS](http://github.com/pH7Software/pH7-Social-Dating-CMS) :smiley:).
